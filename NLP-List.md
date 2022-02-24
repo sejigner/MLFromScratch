@@ -23,6 +23,16 @@
 다음의 프로젝트 리스트를 확인하고 가장 관심가는 주제를 택하여 마이크로서비스를 제작한다.
 
 ### Project 1. 자동완성 기능 An autocomplete feature
+- 전통적으로 자동완성 기능은 key-value 검색을 활용해왔지만, 머신머닝을 이용한 방식은 한 단계 발전된 방식이다. 단어나 문구의 전역적인 사전을 참조하는 것 대신에 사용자들의 입력을 기반으로 학습되어 가장 가능성 있는 다음 문구를 예측하도록 한다.
+- Gmail이 빠른 답장 기능에서 간단한 문구를 제공하는 것이 그 예이다.
+
+- 사용 모델:RoBERTa (Robustly Optimized BERT Pretraining Approach)
+  - 페이스북에서 개발된 NLP 모델로, 학습 접근 방식을 살짝 달리하여 구글 BERT의 성능을 개선시켜 구축했다.
+  - 사전 학습된 RoBERTa는 PyTorch Hub를 통해 로드되어 내장된 fill_mask() 메서드를 갖게 된다.
+  - fill_mask() 메서드에 스트링을 입력하면, RoBERTa가 예측하는 다음 단어나 문구가 있는 위치를 가리키게 된다.
+  - 참조된 위치에서 예측된 결과물을 가져온다.
+  - 이제 이 RoBERTa를 API로서 배포하고, 구현하고자 하는 프로젝트에 유저의 입력으로 배포된 모델에 질의하는 코드를 작성한다.
+
 
 ### Project 2. 고객지원 봇 Customer support bot
 
@@ -34,4 +44,5 @@
 
 
 ## Reference
-https://medium.com/@calebkaiser/a-list-of-beginner-friendly-nlp-projects-using-pre-trained-models-dc4768b4bec0
+- https://medium.com/@calebkaiser/a-list-of-beginner-friendly-nlp-projects-using-pre-trained-models-dc4768b4bec0
+- https://brunch.co.kr/@choseunghyek/7
