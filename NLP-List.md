@@ -46,3 +46,4 @@
 ## Reference
 - https://medium.com/@calebkaiser/a-list-of-beginner-friendly-nlp-projects-using-pre-trained-models-dc4768b4bec0
 - https://brunch.co.kr/@choseunghyek/7
+- https://medium.com/analytics-vidhya/using-roberta-with-fastai-for-nlp-7ed3fed21f6c
